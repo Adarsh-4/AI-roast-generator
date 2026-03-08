@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Roast Generator</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+
+<div id="loader">
+
+<div class="spinner"></div>
+
+<h2>Starting AI Roast Engine...</h2>
+
+</div>
+
+<!-- Background -->
+
+<canvas id="bg"></canvas>
+
+<!-- Main App -->
+
+<div class="app" id="app">
+
+<h1 class="logo">⚡ AI Roast Generator</h1>
+
+<div class="chatbox" id="chatbox">
+
+<div class="ai">
+नमस्ते 👀  
+किसे roast करना है? नाम लिखो।
+</div>
+
+</div>
+
+<div class="inputArea">
+
+<input
+type="text"
+id="nameInput"
+placeholder="यहाँ नाम लिखो..."
+autocomplete="off"
+/>
+
+<button onclick="generateRoast()">Roast</button>
+
+</div>
+
+<div class="meter">
+
+<div id="meterBar"></div>
+
+</div>
+
+<div class="actions">
+
+<button onclick="copyRoast()">Copy</button>
+
+<button onclick="shareWhatsApp()">Share</button>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,175 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+height:100vh;
+overflow:hidden;
+}
+
+/* Loading Screen */
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:#000;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.spinner{
+width:70px;
+height:70px;
+border:6px solid #111;
+border-top:6px solid #00f7ff;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:20px;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* Background */
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+/* App */
+
+.app{
+display:none;
+width:95%;
+max-width:700px;
+margin:auto;
+padding:30px;
+margin-top:30px;
+border-radius:15px;
+
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+
+border:1px solid rgba(255,255,255,0.1);
+
+box-shadow:0 0 25px #00f7ff22;
+}
+
+/* Logo */
+
+.logo{
+text-align:center;
+color:#00f7ff;
+text-shadow:0 0 10px #00f7ff;
+margin-bottom:20px;
+}
+
+/* Chat */
+
+.chatbox{
+height:350px;
+overflow-y:auto;
+padding:20px;
+border-radius:10px;
+
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+
+margin-bottom:15px;
+}
+
+.ai{
+background:#111;
+padding:10px 15px;
+border-radius:10px;
+margin-bottom:10px;
+max-width:80%;
+}
+
+.user{
+background:#00f7ff;
+color:black;
+padding:10px 15px;
+border-radius:10px;
+margin-left:auto;
+margin-bottom:10px;
+max-width:80%;
+}
+
+/* Input */
+
+.inputArea{
+display:flex;
+gap:10px;
+margin-bottom:10px;
+}
+
+input{
+flex:1;
+padding:12px;
+border:none;
+border-radius:6px;
+
+background:rgba(255,255,255,0.08);
+color:white;
+outline:none;
+}
+
+button{
+padding:12px 20px;
+border:none;
+border-radius:6px;
+
+background:#00f7ff;
+color:black;
+
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+box-shadow:0 0 10px #00f7ff;
+}
+
+/* Savage Meter */
+
+.meter{
+height:10px;
+background:#111;
+border-radius:10px;
+overflow:hidden;
+margin-bottom:10px;
+}
+
+#meterBar{
+height:100%;
+width:0%;
+background:red;
+transition:0.5s;
+}
+
+/* Buttons */
+
+.actions{
+display:flex;
+gap:10px;
+}
+
+.actions button:last-child{
+background:#25D366;
+color:white;
+}
